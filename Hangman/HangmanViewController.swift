@@ -10,6 +10,9 @@ import UIKit
 
 class HangmanViewController: UIViewController {
 
+    @IBOutlet weak var alphabetBtn: UIButton!
+    @IBOutlet weak var guessBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,6 +21,17 @@ class HangmanViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func guessBtnClicked(sender: AnyObject) {
+    }
+    
+    @IBAction func alphabetClicked(sender: UIButton) {
+        sender.backgroundColor = UIColor.magentaColor()
+        sender.enabled = false
+        var tag = sender.tag
+        print(tag)
+        
     }
 }
 
